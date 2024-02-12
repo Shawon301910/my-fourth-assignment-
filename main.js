@@ -62,3 +62,36 @@ function password(obj) {
     const newPassword = generatePassword.charAt(0).toUpperCase() + generatePassword.slice(1);
     return newPassword;
 }
+
+
+
+
+
+function monthlySavings(arr, livingCost) {
+    if (!Array.isArray(arr) || typeof livingCost !== "number") {
+        return "invalid input";
+    }
+
+    let withoutPayingTax = 0;
+    let excludingTax = 0;
+
+    for (const number of arr) {
+        if (number < 3000) {
+            withoutPayingTax += number;
+        }
+        else if (number >= 3000) {
+            const tax = number / (100 / 20);
+            const total = number - tax;
+            excludingTax = + total;
+        }
+    }
+
+    const excludingTaxMyAllMoney = withoutPayingTax + excludingTax;
+    const totalMoneySaved = excludingTaxMyAllMoney - livingCost;
+
+    if (totalMoneySaved < 0) {
+        return "earn more";
+    }
+
+    return totalMoneySaved;
+}
