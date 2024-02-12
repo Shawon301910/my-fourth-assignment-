@@ -1,3 +1,6 @@
+
+// task ----------------------- 1;
+
 function calculateMoney(ticketSale) {
     if (ticketSale < 0) {
         return "Invalid Number";
@@ -14,8 +17,7 @@ function calculateMoney(ticketSale) {
     return money;
 }
 
-
-
+// task ----------------------- 2;
 
 function checkName(name) {
     if (typeof name !== "string") {
@@ -32,9 +34,7 @@ function checkName(name) {
     }
 }
 
-
-
-
+// task ----------------------- 3;
 
 function deleteInvalids(array) {
     if (!Array.isArray(array)) {
@@ -50,8 +50,7 @@ function deleteInvalids(array) {
     return numbers;
 }
 
-
-
+// task ----------------------- 4;
 
 function password(obj) {
     if (!obj.name || !obj.birthYear || !obj.siteName || obj.birthYear.toString().length !== 4) {
@@ -63,9 +62,7 @@ function password(obj) {
     return newPassword;
 }
 
-
-
-
+// task ----------------------- 5;
 
 function monthlySavings(arr, livingCost) {
     if (!Array.isArray(arr) || typeof livingCost !== "number") {
