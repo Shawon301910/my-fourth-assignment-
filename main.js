@@ -49,3 +49,16 @@ function deleteInvalids(array) {
     }
     return numbers;
 }
+
+
+
+
+function password(obj) {
+    if (!obj.name || !obj.birthYear || !obj.siteName || obj.birthYear.toString().length !== 4) {
+        return "invalid";
+    }
+
+    const generatePassword = `${obj.siteName}#${obj.name}@${obj.birthYear}`;
+    const newPassword = generatePassword.charAt(0).toUpperCase() + generatePassword.slice(1);
+    return newPassword;
+}
